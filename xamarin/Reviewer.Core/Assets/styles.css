@@ -1,0 +1,14 @@
+﻿^contentpage {
+    background-color: #005c90;
+}
+
+#photogrid {
+    background-color: #005c90;
+}
+
+.greenbutton {
+    font-style: bold;
+    font-size: medium;
+    background-color: green;
+    color:white;
+}

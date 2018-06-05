@@ -3,9 +3,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="PhotoTour.Core.PhotoListPage"
+    xmlns:triggers="clr-namespace:PhotoTour.Core.Triggers;assembly=PhotoTour.Core"
     Title="{Binding Title}">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/styles.css" />
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid x:Name="photogrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -17,15 +21,36 @@
                             JustifyContent="SpaceAround" />
             </ScrollView>
 
-            <Button 
+            <Button StyleClass="greenbutton"
                 Text="Take Photo" 
                 Command="{Binding TakePhotoCommand}"
                 IsEnabled="{Binding IsNotBusy}"
-                IsVisible="{Binding IsLoggedIn}"
                 Grid.Row="1" 
                 Style="{StaticResource ButtonOutline}" 
                 Margin="10,0,10,10" 
-                x:Name="addNewReview" />
+                x:Name="addNewReview">
+
+                <Button.Triggers>
+                    <DataTrigger
+                        Binding="{Binding IsLoggedIn}"
+                        TargetType="Button"
+                        Value="False">
+                        <DataTrigger.EnterActions>
+                            <triggers:AnimationTrigger
+                                EasingType="SpringOut"
+                                IsMakeVisible="False"
+                                TranslateY="70" />
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <triggers:AnimationTrigger
+                                EasingType="SpringOut"
+                                IsMakeVisible="True"
+                                TranslateY="0" />
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                </Button.Triggers>
+                
+            </Button>
 
             <ActivityIndicator x:Name="activityIndicator"
                IsRunning="{Binding IsBusy}"
