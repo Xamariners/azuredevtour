@@ -1,14 +1,22 @@
-﻿^contentpage {
-    background-color: #005c90;
+﻿#photogrid {
+    background-color: #f3f3f3;
 }
 
-#photogrid {
-    background-color: #005c90;
+^contentpage {
+    background-color: #f3f3f3;
 }
 
-.greenbutton {
+.bluebutton {
     font-style: bold;
     font-size: medium;
-    background-color: green;
-    color:white;
+    background-color: #005c90;
+    color: white;
+}
+
+.imgbackground {
+    background-color: #9b9b9b
+}
+
+#commentsList {
+    padding: 10px;
 }

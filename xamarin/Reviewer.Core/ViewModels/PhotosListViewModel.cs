@@ -26,6 +26,7 @@ namespace PhotoTour.Core
         IDataService dataService;
 
         bool isLoggedIn = false;
+
         public bool IsLoggedIn
         {
             get => isLoggedIn;

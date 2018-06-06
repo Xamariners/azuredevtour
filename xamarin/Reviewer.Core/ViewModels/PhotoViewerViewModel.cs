@@ -94,10 +94,12 @@ namespace Reviewer.Core
             ObservableComments = new ObservableCollection<Comment>();
             foreach (var item in Photo.Comments)
             {
+                
                 ObservableComments.Add(item);
             }
         }
 
+    
         async void CheckLoginStatus()
         {
             authenticationResult = await identityService.GetCachedSignInToken();
@@ -222,5 +224,6 @@ namespace Reviewer.Core
             var message = new BlockUserMessage();
             MessagingCenter.Send(message, BlockUserMessage.Message);
         }
+
     }
 }

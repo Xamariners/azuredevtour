@@ -44,7 +44,7 @@
                             JustifyContent="SpaceAround" />
             </ScrollView>
 
-            <Button StyleClass="greenbutton"
+            <Button StyleClass="bluebutton"
                 Text="Take Photo" 
                 Command="{Binding TakePhotoCommand}"
                 IsEnabled="{Binding IsNotBusy}"
@@ -52,7 +52,7 @@
                 Grid.ColumnSpan="2"
                 Style="{StaticResource ButtonOutline}" 
                 Margin="20,0,20,20"
-                TranslationY="70"
+                TranslationY="140"
                 VerticalOptions="End"
                 x:Name="addNewReview">
 
@@ -65,7 +65,7 @@
                             <triggers:AnimationTrigger
                                 EasingType="SpringOut"
                                 IsMakeVisible="False"
-                                TranslateY="70" />
+                                TranslateY="140" />
                         </DataTrigger.EnterActions>
                         <DataTrigger.ExitActions>
                             <triggers:AnimationTrigger

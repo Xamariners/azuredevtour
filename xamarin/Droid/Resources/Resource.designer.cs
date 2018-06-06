@@ -1549,6 +1549,9 @@ namespace Reviewer.Droid
 			global::Microsoft.Identity.Client.Resource.Styleable.ViewStubCompat_android_id = global::Reviewer.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Microsoft.Identity.Client.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Reviewer.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Microsoft.Identity.Client.Resource.Styleable.ViewStubCompat_android_layout = global::Reviewer.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.Id.agentWebView = global::Reviewer.Droid.Resource.Id.agentWebView;
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.Layout.WebAuthenticationBroker = global::Reviewer.Droid.Resource.Layout.WebAuthenticationBroker;
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.String.ApplicationName = global::Reviewer.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Reviewer.Droid.Resource.Attribute.actionBarSize;
 		}
 		
