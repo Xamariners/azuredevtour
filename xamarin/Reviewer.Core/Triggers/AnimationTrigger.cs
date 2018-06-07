@@ -28,7 +28,7 @@ namespace PhotoTour.Core.Triggers
             if (!IsMakeVisible)
             {
                 Task.Delay(600);
-                sender.IsVisible = false;
+                //sender.IsVisible = false;
             }
         }
 

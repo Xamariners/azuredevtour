@@ -58,7 +58,7 @@
 
                 <Button.Triggers>
                     <DataTrigger
-                        Binding="{Binding IsLoggedIn}"
+                        Binding="{Binding IsLoggedIn, Mode=TwoWay}"
                         TargetType="Button"
                         Value="False">
                         <DataTrigger.EnterActions>
@@ -81,6 +81,7 @@
             <ActivityIndicator x:Name="activityIndicator"
                IsRunning="{Binding IsBusy}"
                IsVisible="{Binding IsBusy}"
+               Color="Black"
                VerticalOptions="Center" Grid.RowSpan="3" Grid.ColumnSpan="2" />
         </Grid>
     </ContentPage.Content>

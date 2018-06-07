@@ -13,6 +13,20 @@
     color: white;
 }
 
+.graybutton {
+    font-style: bold;
+    font-size: medium;
+    background-color: #9b9b9b;
+    color: white;
+}
+
+.greenbutton {
+    font-style: bold;
+    font-size: medium;
+    background-color: green;
+    color: white;
+}
+
 .imgbackground {
     background-color: #9b9b9b
 }

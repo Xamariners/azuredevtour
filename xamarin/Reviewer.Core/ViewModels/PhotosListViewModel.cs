@@ -85,12 +85,13 @@ namespace PhotoTour.Core
 
             Task.Run(async () =>
             {
-                await CheckLoginStatus();
+                var isLoggedIn = await CheckLoginStatus();
+                IsLoggedIn = isLoggedIn;
                 //await GetTotalPhotos();
             });
         }
 
-        public async Task CheckLoginStatus()
+        public async Task<bool> CheckLoginStatus()
         {
             authResult = await identityService.GetCachedSignInToken();
 
@@ -100,6 +101,10 @@ namespace PhotoTour.Core
 
                 LoginButtonText = IsLoggedIn ? logoutText : loginText;
             });
+
+            IsLoggedIn = authResult?.User != null;
+
+            return authResult?.User != null;
         }
 
         async Task GetTotalPhotos()

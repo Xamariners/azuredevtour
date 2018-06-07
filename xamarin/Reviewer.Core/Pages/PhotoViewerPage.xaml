@@ -35,7 +35,7 @@
                     Style="{StaticResource ButtonOutline}" Grid.Row="3" Grid.ColumnSpan="2" />
 
             <StackLayout BackgroundColor="White" Grid.Row="5" Grid.ColumnSpan="2" Margin="10" Padding="10">
-                <ListView SeparatorVisibility="None" IsEnabled="False" ItemsSource="{Binding ObservableComments}" x:Name="commentsList">
+                <ListView SeparatorColor="White" IsEnabled="False" ItemsSource="{Binding ObservableComments}" x:Name="commentsList">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ImageCell Text="{Binding Text}" Detail="{Binding DisplayName}" ImageSource="{Binding DisplayName, Converter={StaticResource avatarConverter}}"></ImageCell>
@@ -44,7 +44,7 @@
                 </ListView>
             </StackLayout>
 
-            <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="2" BackgroundColor="{StaticResource Primary}" 
+            <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="2" BackgroundColor="White" 
                    Margin="20,100" IsVisible="{Binding AddingComment}">
 
                 <Grid>
@@ -61,17 +61,17 @@
                          Grid.Row="0" Grid.ColumnSpan="2" /> 
 
                     <Button Text="Save" Command="{Binding SaveCommentCommand}" IsEnabled="{Binding SaveCommentEnabled}"
-                            StyleClass="bluebutton" Grid.Row="1"  />
+                            StyleClass="greenbutton" Grid.Row="1"  />
                     
                     <Button Text="Cancel" Command="{Binding CancelCommentCommand}" IsEnabled="{Binding CancelCommentEnabled}"
-                            StyleClass="bluebutton" BackgroundColor="{StaticResource Accent}" Grid.Row="1" Grid.Column="1" TextColor="White" />
+                            StyleClass="graybutton" Grid.Row="1" Grid.Column="1"  />
                 </Grid>
             </Frame>
 
             <ActivityIndicator x:Name="activityIndicator"
                IsRunning="{Binding IsBusy}"
                IsVisible="{Binding IsBusy}"
-               VerticalOptions="Center" Grid.RowSpan="6" Grid.ColumnSpan="2" />
+               VerticalOptions="Center" Grid.RowSpan="6" Grid.ColumnSpan="2" Color="Black" />
         </Grid>
     </ContentPage.Content>
 

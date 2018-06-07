@@ -7,7 +7,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using ImageCircle.Forms.Plugin.Droid;
 using PhotoTour.Core;
 using Xamarin.Forms;
 using Microsoft.Identity.Client;
@@ -30,8 +29,6 @@ namespace Reviewer.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
-
-		    ImageCircleRenderer.Init();
 
             var identity = DependencyService.Get<IIdentityService>(DependencyFetchTarget.GlobalInstance);
 			identity.UIParent = new UIParent(this);
