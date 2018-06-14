@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Photo Tour</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.microsoft.PhotoTour</string>
+	<string>com.xamariners.PhotoTour</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
